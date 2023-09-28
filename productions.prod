@@ -1,0 +1,6 @@
+program -> stmts	eof
+stmts -> stmts stmt | stmts decls | stmts block | stmts func | epsilon
+block -> { stmts }
+decls -> decls decl | epsilon
+decl -> type id;
+type -> type [ num ] | basic
